@@ -1,6 +1,5 @@
-# eJPT Preparation
+# 1. Assessment Methodologies: Information Gathering CTF 1
 
-## 1. Assessment Methodologies: Information Gathering CTF 1
 
 ### Objective
 Document the solution to the first assesment of eJPT exam.
