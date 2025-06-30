@@ -28,3 +28,9 @@ then go to the http://target.ine.local/robots.txt
 <img width="1137" alt="Screenshot 2025-06-26 at 6 25 56 PM" src="https://github.com/user-attachments/assets/48a0225f-69ca-4a27-a196-f7e17a008c26" />
 then there's the flag
 
+- Flag 2: What website is running on the target, and what is its version?
+First I tried to look for it with sitemap, but got an error: 
+![Screenshot 2025-06-30 at 12 43 18 AM](https://github.com/user-attachments/assets/c09345f0-a96d-4ebd-989f-f50377b1fd85)
+
+That's why I tried with nmap
+
