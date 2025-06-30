@@ -46,4 +46,21 @@ there's the flag
 ![Screenshot 2025-06-30 at 12 58 16 AM](https://github.com/user-attachments/assets/4cb9b470-2398-4c2f-97fe-c4da4130d8cd)
 
 - Flag 3: Directory browsing might reveal where files are stored.
+For this one I used gobuster, and learned about it here: https://medium.com/@dcsenadheera777/directory-file-brute-forcing-and-enumeration-using-gobuster-8141a847f2f7
+
+opened the cmd and run the cmd console, and run the gobuster command:
+![Screenshot 2025-06-30 at 1 12 42 AM](https://github.com/user-attachments/assets/e93f588d-a739-4d34-8447-2d61a82e35c9)
+then checked the pages that had a response with 200 or 301 
+opened the wp-content directory and saw a major list of directories as the image: 
+
+![Screenshot 2025-06-30 at 1 17 00 AM](https://github.com/user-attachments/assets/28542f82-ef63-46d0-bdc7-e46be6dfb1ff)
+
+then run the command again in gobuster inclufing wp-includes and got this output: 
+![Screenshot 2025-06-30 at 1 12 54 AM](https://github.com/user-attachments/assets/318142da-8554-466b-a145-c04715c9a6d3)
+
+checked the page again and saw a file with flag name on it, opened and saw the answer: 
+![Screenshot 2025-06-30 at 1 13 30 AM](https://github.com/user-attachments/assets/a4ff8e19-73fc-48bb-890a-6649fbda6333)
+
+- Flag 4: An overlooked backup file in the webroot can be problematic if it reveals sensitive configuration details.
+
 
