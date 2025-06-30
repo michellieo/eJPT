@@ -34,3 +34,11 @@ First I tried to look for it with sitemap, but got an error:
 
 That's why I tried with nmap
 
+to get the ip, I get the command host and address 
+![Screenshot 2025-06-30 at 12 54 11 AM](https://github.com/user-attachments/assets/33f6b110-c668-4c92-9820-9f3ac84f559c)
+
+run the nmap command, and got the output: 
+![Screenshot 2025-06-30 at 12 55 53 AM](https://github.com/user-attachments/assets/fa00eac6-8b39-4892-a55b-1d9da71aeff4)
+![Screenshot 2025-06-30 at 12 56 07 AM](https://github.com/user-attachments/assets/343a7f45-0af4-46c8-ad81-793e2bde8d53)
+
+
