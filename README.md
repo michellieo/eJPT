@@ -62,10 +62,24 @@ checked the page again and saw a file with flag name on it, opened and saw the a
 ![Screenshot 2025-06-30 at 1 13 30 AM](https://github.com/user-attachments/assets/a4ff8e19-73fc-48bb-890a-6649fbda6333)
 
 - Flag 4: An overlooked backup file in the webroot can be problematic if it reveals sensitive configuration details.
-after some research on google, I found that the file is "wp-config.bak" , and via cli got the information with the curl command. And there's the flag
+
+After some research on google, I found that the file is "wp-config.bak" , and via cli got the information with the curl command. And there's the flag
 n![Screenshot 2025-06-30 at 1 45 05 AM](https://github.com/user-attachments/assets/612616d9-2d38-42b5-886f-8f80bf5530d2)
 ![Screenshot 2025-06-30 at 1 46 06 AM](https://github.com/user-attachments/assets/4e3b8dc6-384d-4cff-b259-a6bb79a73f5b)
 
+- Flag 5: Certain files may reveal something interesting when mirrored.
+
+the httrack tool help us to mirror the website 
+
+![Screenshot 2025-06-30 at 1 58 45 AM](https://github.com/user-attachments/assets/21b1985d-fab5-485b-aaa4-d23fa7177ab8)
+
+after checking the location of the mirrored website, I found a .php file, then I cat the file to see the content and founf the flag fot the last question.
+![Screenshot 2025-06-30 at 1 59 04 AM](https://github.com/user-attachments/assets/6560d64a-12f4-4e14-90e3-c4b74c14ea10)
+
+now, lab is completed! 
+
+
+![Screenshot 2025-06-30 at 2 02 32 AM](https://github.com/user-attachments/assets/f7630e60-5129-4f8c-8191-99794b1e4026)
 
 
 
