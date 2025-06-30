@@ -62,5 +62,10 @@ checked the page again and saw a file with flag name on it, opened and saw the a
 ![Screenshot 2025-06-30 at 1 13 30 AM](https://github.com/user-attachments/assets/a4ff8e19-73fc-48bb-890a-6649fbda6333)
 
 - Flag 4: An overlooked backup file in the webroot can be problematic if it reveals sensitive configuration details.
+after some research on google, I found that the file is "wp-config.bak" , and via cli got the information with the curl command. And there's the flag
+n![Screenshot 2025-06-30 at 1 45 05 AM](https://github.com/user-attachments/assets/612616d9-2d38-42b5-886f-8f80bf5530d2)
+![Screenshot 2025-06-30 at 1 46 06 AM](https://github.com/user-attachments/assets/4e3b8dc6-384d-4cff-b259-a6bb79a73f5b)
+
+
 
 
