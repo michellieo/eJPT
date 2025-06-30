@@ -41,6 +41,9 @@ to get the ip, I get the command host and address
 
 run the nmap command, and got the output: 
 ![Screenshot 2025-06-30 at 12 55 53 AM](https://github.com/user-attachments/assets/fa00eac6-8b39-4892-a55b-1d9da71aeff4)
-![Screenshot 2025-06-30 at 12 56 07 AM](https://github.com/user-attachments/assets/343a7f45-0af4-46c8-ad81-793e2bde8d53)
 
+there's the flag
+![Screenshot 2025-06-30 at 12 58 16 AM](https://github.com/user-attachments/assets/4cb9b470-2398-4c2f-97fe-c4da4130d8cd)
+
+- Flag 3: Directory browsing might reveal where files are stored.
 
