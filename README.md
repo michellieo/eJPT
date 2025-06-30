@@ -16,7 +16,9 @@ Document the solution to the first assesment of eJPT exam.
 this is the page of instruction: 
 <img width="1876" alt="Screenshot 2025-06-26 at 6 10 44 PM" src="https://github.com/user-attachments/assets/dd2cb22c-1187-466f-baaf-b333a16fe488" />
 
-at first, when you open the lab you'll see a kali linux page like this one: (attach image)
+at first, when you open the lab you'll see a kali linux page like this one:
+<img width="1918" alt="Screenshot 2025-06-26 at 6 23 01 PM" src="https://github.com/user-attachments/assets/4318d058-e57a-4d7f-993c-48a46243ff52" />
+
 
 then after reading the first question that is: 
 - Flag 1: This tells search engines what to and what not to avoid.
