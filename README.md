@@ -24,4 +24,7 @@ then after reading the first question that is:
 we can check it with the file robots.txt. 
 
 let's open the browser and go to the website,  http://target.ine.local
+then go to the http://target.ine.local/robots.txt 
+<img width="1137" alt="Screenshot 2025-06-26 at 6 25 56 PM" src="https://github.com/user-attachments/assets/48a0225f-69ca-4a27-a196-f7e17a008c26" />
+then there's the flag
 
