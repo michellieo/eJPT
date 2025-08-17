@@ -75,7 +75,12 @@ when lab page gets opened you'll see a kali linux environmemt. According to the 
   Using binary mode to transfer files.
 
   ```
+  In order to chek what's stored inside the server, run the following command
+  ```
+  ftp> ls
 
+  ```
+  
 
   
 - Flag 4: A well-named database can be quite revealing. Peek at the configurations to discover the hidden treasure.
