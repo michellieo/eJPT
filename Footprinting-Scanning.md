@@ -40,5 +40,31 @@ when lab page gets opened you'll see a kali linux environmemt. According to the 
 
   
 - Flag 3: Anonymous access sometimes leads to forgotten treasures. Connect and explore the directory; you might stumble upon something valuable.
+  Check again the nmap output, you'll see that the ftp service is open and can be accessed anonymously
+
+  ```
+  PORT     STATE SERVICE  VERSION
+  21/tcp   open  ftp      vsftpd 3.0.5
+  | ftp-anon: Anonymous FTP login allowed (FTP code 230)
+  | -rw-r--r--    1 0        0              22 Oct 28  2024 creds.txt
+  |_-rw-r--r--    1 0        0              39 Aug 17 16:53 flag.txt
+  | ftp-syst: 
+  |   STAT: 
+  | FTP server status:
+  |      Connected to ::ffff:192.85.108.2
+  |      Logged in as ftp
+  |      TYPE: ASCII
+  |      No session bandwidth limit
+  |      Session timeout in seconds is 300
+  |      Control connection is plain text
+  |      Data connections will be plain text
+  |      At session startup, client count was 2
+  |      vsFTPd 3.0.5 - secure, fast, stable
+  |_End of status
+  ```
+
+
+
+  
 - Flag 4: A well-named database can be quite revealing. Peek at the configurations to discover the hidden treasure.
 
