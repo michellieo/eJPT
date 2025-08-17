@@ -40,7 +40,7 @@ when lab page gets opened you'll see a kali linux environmemt. According to the 
 
   
 - Flag 3: Anonymous access sometimes leads to forgotten treasures. Connect and explore the directory; you might stumble upon something valuable.
-  Check again the nmap output, you'll see that the ftp service is open and can be accessed anonymously
+  Check again the nmap output, you'll see that the ftp service is open and can be accessed anonymously. Due to "Anonymous FTP login allowed"
 
   ```
   PORT     STATE SERVICE  VERSION
@@ -62,7 +62,15 @@ when lab page gets opened you'll see a kali linux environmemt. According to the 
   |      vsFTPd 3.0.5 - secure, fast, stable
   |_End of status
   ```
-
+  now to access the ftp server, user anonymours as username and hit enter in password
+  ```
+  ftp target.ine.local
+  Connected to target.ine.local.
+  220 (vsFTPd 3.0.5)
+  Name (target.ine.local:root): anonymous
+  331 Please specify the password.
+  Password: 
+  ```
 
 
   
