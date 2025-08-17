@@ -104,3 +104,5 @@ when lab page gets opened you'll see a kali linux environmemt. According to the 
 
 - Flag 4: A well-named database can be quite revealing. Peek at the configurations to discover the hidden treasure.
 
+  refer to the nmap output, you'll see that at the port 3306 there's a mysql service running
+  to access the database run this command ``` mysql -h target.ine.local -u db_admin -p ```
