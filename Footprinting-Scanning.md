@@ -12,6 +12,8 @@ Document the solution to the second assesment of eJPT exam.
 ### Tools Used
 
 - NMAP
+- FTP
+- MySQL
 
 ### Steps
 
