@@ -108,7 +108,7 @@ when lab page gets opened you'll see a kali linux environmemt. According to the 
   to access the database run this command ``` mysql -h target.ine.local -u db_admin -p ``` login into it using the crednetials found on creds.txt
   <img width="681" height="215" alt="Screenshot 2025-08-17 at 1 12 18 PM" src="https://github.com/user-attachments/assets/d862e917-7be3-4a5b-98fc-b3e484a79a08" />
 
-  since we have access, let's check the database
+  since we have access, let's check the database with ```show databases;```
 
   ```
   MySQL [(none)]> show databases;
@@ -123,4 +123,4 @@ when lab page gets opened you'll see a kali linux environmemt. According to the 
   +----------------------------------------+
   5 rows in set (0.001 sec)
   ```
-
+  and there's the last flag
