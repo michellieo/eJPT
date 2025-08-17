@@ -27,7 +27,7 @@ when lab page gets opened you'll see a kali linux environmemt. According to the 
   <img width="1916" height="964" alt="Screenshot 2025-08-16 at 12 25 38 AM" src="https://github.com/user-attachments/assets/1664d84c-8277-4afe-9959-5ab384c76525" />
 
 - Flag 2: The gatekeeper's instructions often reveal what should remain unseen. Don't forget to read between the lines.
-  After analyzing the nmpao output, you'll see that robot.txt has 3 entries that are not disabled
+  After analyzing the nmap output, you'll see that robot.txt has 3 entries that are disabled
   ```
   | http-robots.txt: 3 disallowed entries 
   |_/photos /secret-info/ /data/
