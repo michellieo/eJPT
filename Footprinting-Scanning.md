@@ -70,6 +70,10 @@ when lab page gets opened you'll see a kali linux environmemt. According to the 
   Name (target.ine.local:root): anonymous
   331 Please specify the password.
   Password: 
+  230 Login successful.
+  Remote system type is UNIX.
+  Using binary mode to transfer files.
+
   ```
 
 
