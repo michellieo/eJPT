@@ -124,3 +124,7 @@ when lab page gets opened you'll see a kali linux environmemt. According to the 
   5 rows in set (0.001 sec)
   ```
   and there's the last flag
+
+Since that was the last flag, we have finished the lab. 
+
+<img width="1920" height="1000" alt="Screenshot 2025-08-17 at 1 17 21 PM" src="https://github.com/user-attachments/assets/25ad288e-55a2-419c-bce2-01aeb2fb6312" />
