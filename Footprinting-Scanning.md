@@ -76,12 +76,21 @@ when lab page gets opened you'll see a kali linux environmemt. According to the 
 
   ```
   In order to chek what's stored inside the server, run the following command
+  
   ```
   ftp> ls
+  ```
+  As a result from this command it will appear two .txt documents that match with the namp output
 
   ```
+  229 Entering Extended Passive Mode (|||6715|)
+  150 Here comes the directory listing.
+  -rw-r--r--    1 0        0              22 Oct 28  2024 creds.txt
+  -rw-r--r--    1 0        0              39 Aug 17 16:53 flag.txt
+  ```
+  now to get those files, we run the get command and transfer to the local machine
   
+  <img width="1900" height="251" alt="Screenshot 2025-08-17 at 12 55 56 PM" src="https://github.com/user-attachments/assets/e3d755a8-b504-47e5-ae56-dd82c222756f" />
 
-  
 - Flag 4: A well-named database can be quite revealing. Peek at the configurations to discover the hidden treasure.
 
