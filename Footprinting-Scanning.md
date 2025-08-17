@@ -92,5 +92,15 @@ when lab page gets opened you'll see a kali linux environmemt. According to the 
   
   <img width="1900" height="251" alt="Screenshot 2025-08-17 at 12 55 56 PM" src="https://github.com/user-attachments/assets/e3d755a8-b504-47e5-ae56-dd82c222756f" />
 
+  Now we can visualize the content of the documents:
+
+  ```  
+   cat flag.txt                                                                                                                                                                                                                           
+  FLAG3_babd7c75168b49a291b3b32567b53e50
+   cat creds.txt                                                                                                                                                                                                                          
+  db_admin:password@123
+
+  ```
+
 - Flag 4: A well-named database can be quite revealing. Peek at the configurations to discover the hidden treasure.
 
