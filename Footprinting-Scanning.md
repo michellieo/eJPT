@@ -33,10 +33,10 @@ when lab page gets opened you'll see a kali linux environmemt. According to the 
   |_/photos /secret-info/ /data/
   ```
   Go to the website and acces the directory of secret-info, you'll see a flag.txt document inside 
-<img width="1915" height="994" alt="Screenshot 2025-08-17 at 12 27 40 PM" src="https://github.com/user-attachments/assets/ae532868-f034-47ae-b130-04966f1cc2bc" />
+  <img width="1915" height="994" alt="Screenshot 2025-08-17 at 12 27 40 PM" src="https://github.com/user-attachments/assets/ae532868-f034-47ae-b130-04966f1cc2bc" />
   Then go to the directory including the flag.txt, and you'll find the flag
   
-<img width="1913" height="959" alt="Screenshot 2025-08-17 at 12 29 21 PM" src="https://github.com/user-attachments/assets/42e7c6a0-f5ae-4e57-a915-af1a98deae5d" />
+  <img width="1913" height="959" alt="Screenshot 2025-08-17 at 12 29 21 PM" src="https://github.com/user-attachments/assets/42e7c6a0-f5ae-4e57-a915-af1a98deae5d" />
 
   
 - Flag 3: Anonymous access sometimes leads to forgotten treasures. Connect and explore the directory; you might stumble upon something valuable.
