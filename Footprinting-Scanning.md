@@ -100,6 +100,7 @@ when lab page gets opened you'll see a kali linux environmemt. According to the 
    cat creds.txt                                                                                                                                                                                                                          
   db_admin:password@123
   ```
+  The flag is there, and we have the credentials for what it lookslike a database
 
 - Flag 4: A well-named database can be quite revealing. Peek at the configurations to discover the hidden treasure.
 
