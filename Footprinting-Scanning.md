@@ -94,12 +94,11 @@ when lab page gets opened you'll see a kali linux environmemt. According to the 
 
   Now we can visualize the content of the documents:
 
-  ```  
-   cat flag.txt                                                                                                                                                                                                                           
+  ```
+  cat flag.txt                                                                                                                                                                                                                           
   FLAG3_babd7c75168b49a291b3b32567b53e50
    cat creds.txt                                                                                                                                                                                                                          
   db_admin:password@123
-
   ```
 
 - Flag 4: A well-named database can be quite revealing. Peek at the configurations to discover the hidden treasure.
