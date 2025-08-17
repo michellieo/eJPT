@@ -24,5 +24,11 @@ when lab page gets opened you'll see a kali linux environmemt. According to the 
 
   First open terminal, then run the following command: nmap  -sC -sV  target.ine.local . As an output you'll have a detailed information per ports. And checking the output, you'll find the flag.
   
-<img width="1916" height="964" alt="Screenshot 2025-08-16 at 12 25 38 AM" src="https://github.com/user-attachments/assets/1664d84c-8277-4afe-9959-5ab384c76525" />
+  <img width="1916" height="964" alt="Screenshot 2025-08-16 at 12 25 38 AM" src="https://github.com/user-attachments/assets/1664d84c-8277-4afe-9959-5ab384c76525" />
+
+- Flag 2: The gatekeeper's instructions often reveal what should remain unseen. Don't forget to read between the lines.
+  
+  
+- Flag 3: Anonymous access sometimes leads to forgotten treasures. Connect and explore the directory; you might stumble upon something valuable.
+- Flag 4: A well-named database can be quite revealing. Peek at the configurations to discover the hidden treasure.
 
