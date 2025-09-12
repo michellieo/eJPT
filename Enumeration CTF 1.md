@@ -48,7 +48,14 @@
   msf6 > workspace -a enum_ctf                                                                      
   [*] Added workspace: enum_ctf                                                                     [*] Workspace: enum_ctf
   ```
+  We can begin with checking the smb version that's running. Also, set the global avariables with the `setg RHOST target.ine.local` command
+
+  <img width="1905" height="621" alt="Screenshot 2025-09-11 at 10 36 50 PM" src="https://github.com/user-attachments/assets/7514a170-35fc-47ec-8418-9a9de5b2cc79" />
+
+  maybe may the following will come::
   In order to look for the auxiliary module of smb that's oing to be used, try the following   command ` search type:auxiliary name:smb`  Since the first flag states that there's a share, let's use the `auxiliary/scanner/snmp/snmp_enumshares` module to enumerate the shares.
   <img width="1173" height="274" alt="Screenshot 2025-09-11 at 10 28 26 PM" src="https://github.com/user-attachments/assets/bfd8f14e-6bcd-459b-b1e0-3b9a09ae1521" />
+
+  Set the `RHOSTS` variable to `target.ine.local`
   
   
