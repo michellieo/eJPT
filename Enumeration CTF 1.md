@@ -42,4 +42,10 @@
   ┌──(root㉿INE)-[~]
   └─# msfconsole 
 ```
+For a more organized setup, it's recommended to add a workspace in msf, in this case is going to be called enum_ctf 
+
+```
+msf6 > workspace -a enum_ctf                                                                      
+[*] Added workspace: enum_ctf                                                                     [*] Workspace: enum_ctf
+```
 
