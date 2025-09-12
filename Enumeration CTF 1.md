@@ -48,4 +48,5 @@ For a more organized setup, it's recommended to add a workspace in msf, in this 
 msf6 > workspace -a enum_ctf                                                                      
 [*] Added workspace: enum_ctf                                                                     [*] Workspace: enum_ctf
 ```
+In order to look for the auxiliary module of smb that's oing to be used, try the following command ` search type:auxiliary name:smb` 
 
