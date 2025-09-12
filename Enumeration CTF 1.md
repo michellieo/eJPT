@@ -32,4 +32,14 @@
   rtt min/avg/max/mdev = 0.086/0.091/0.097/0.005 ms
 
   ```
+  Then you can start the database server and metasploit
+
+  ```
+  ┌──(root㉿INE)-[~]
+  └─# service postgresql start
+  Starting PostgreSQL 16 database server: main.
   
+  ┌──(root㉿INE)-[~]
+  └─# msfconsole 
+```
+
