@@ -75,32 +75,33 @@
   <img width="886" height="257" alt="Screenshot 2025-09-13 at 3 05 43 PM" src="https://github.com/user-attachments/assets/f2992d78-80a3-43bc-9c3d-5c593c12b8ef" />
 
   The `flag1.txt` file is now available on the desktop. There's the first flag. 
+  
   <img width="377" height="68" alt="Screenshot 2025-09-13 at 3 08 21 PM" src="https://github.com/user-attachments/assets/3050020c-24d3-4537-a345-eb57d0f27d82" />
 
+  Second flag states the following: One of the samba users have a bad password. Their private share with the same name as their username is at risk!
 
-
-  
-  
-  
-  ##FOR LATER
-  
-  Now we have to retreive the list of users, for that use the auxiliary module `scanner/smb/smb_enumusers`
+   Now we have to retreive the list of users, for that use the auxiliary module `scanner/smb/smb_enumusers`  As a result we have Josh, Nancy, Bob.
   <img width="1358" height="591" alt="Screenshot 2025-09-13 at 2 44 58 PM" src="https://github.com/user-attachments/assets/1ce60cde-5810-4178-abf1-93ec5ac12c52" />
   
-  As a result we have Josh, Nancy, Bob. Now, we can try to get the password. Let's work with the auxiliary module: `scanner/smb/smb_login`
-  Since we have three users, let's set the variable USER_FILE with a document we are going to create and going to call `user.txt`
+   Now, we can try to get the password. Let's work with the auxiliary module: `scanner/smb/smb_login` Set the SMB user as josh, nancy or bob and the PASS_FILE input `/usr/share/metasploit-  framework/data/wordlists/unix_passwords.txt`
+  I took as first example josh, run the module and got the following output. password is purple
+  <img width="978" height="670" alt="Screenshot 2025-09-13 at 3 20 40 PM" src="https://github.com/user-attachments/assets/cedeb3c4-c38c-4692-b641-8f58c95e428a" />
 
-  ```
-  msf6 auxiliary(scanner/smb/smb_login) > echo "josh,nancy,bob" > user.txt
-  [*] exec: echo "josh,nancy,bob" > user.txt
-  ```
-   <img width="1733" height="797" alt="Screenshot 2025-09-13 at 2 53 29 PM" src="https://github.com/user-attachments/assets/15f3b0d0-3dad-46e4-9210-797e7910b641" />
+  For Nancy and Bob we didn't find any credentials.
 
+    ```
+    [*] target.ine.local:445  - Scanned 1 of 1 hosts (100% complete)
+    [*] target.ine.local:445  - Bruteforce completed, 0 credentials were successful.
+    [*] target.ine.local:445  - You can open an SMB session with these credentials and CreateSession set to true
+    [*] Auxiliary module execution completed
+    ```
 
+  Now, let's try to access the SMB with josh's credentials
+  <img width="689" height="242" alt="Screenshot 2025-09-13 at 3 26 32 PM" src="https://github.com/user-attachments/assets/5b44927f-1b4b-416f-8f79-80a973b63e75" />
 
-  
+  There's is flag 2
+  <img width="685" height="104" alt="Screenshot 2025-09-13 at 3 27 51 PM" src="https://github.com/user-attachments/assets/977f8472-5747-4731-9ce1-66a6ad4bd4b0" />
 
-  
   
   
   
