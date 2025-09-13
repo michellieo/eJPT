@@ -56,7 +56,22 @@
   
   In order to look for the auxiliary module of smb that's going to be used, try the following   command ` search type:auxiliary name:smb`  Since the first flag states that there's a share, let's use the `auxiliary/scanner/snmp/snmp_enumshares` module to enumerate the shares.
   <img width="1173" height="274" alt="Screenshot 2025-09-11 at 10 28 26 PM" src="https://github.com/user-attachments/assets/bfd8f14e-6bcd-459b-b1e0-3b9a09ae1521" />
+  
+  Then you can run it, and the system will find two shares: `print$` and `IPC$`
+  <img width="1894" height="187" alt="Screenshot 2025-09-13 at 1 59 11 PM" src="https://github.com/user-attachments/assets/a5aa0962-1286-46be-a90c-2f6bc036d4f1" />
 
+  Now, let's bruteforce the shares since none of them are accesible, there's a wordlists available on the desktop folder: /root/Desktop/wordlists/shares.txt
+  <img width="1920" height="973" alt="Screenshot 2025-09-13 at 2 09 53 PM" src="https://github.com/user-attachments/assets/88b7b481-26a0-46d2-ad92-8fde4db49866" />
+  You can create a bash file to do it. In my case I named it `enumeration.sh` also make sure to change the permissions of the file so it can be executable. 
+  
+  ```
+  ┌──(root㉿INE)-[~]
+  └─# chmod +x enumeration.sh 
+  ```
+  
 
+  
+  
+  
   
   
