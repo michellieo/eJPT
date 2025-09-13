@@ -68,6 +68,23 @@
   ┌──(root㉿INE)-[~]
   └─# chmod +x enumeration.sh 
   ```
+  After running the file, we found htat there'sa share accessible called `pubfiles` 
+  <img width="1915" height="937" alt="Screenshot 2025-09-13 at 2 24 05 PM" src="https://github.com/user-attachments/assets/1fb0523d-fd67-49b2-b8d6-77217ffb80e7" />
+
+  Now we have to retreive the list of users, for that use the auxiliary module `scanner/smb/smb_enumusers`
+  <img width="1358" height="591" alt="Screenshot 2025-09-13 at 2 44 58 PM" src="https://github.com/user-attachments/assets/1ce60cde-5810-4178-abf1-93ec5ac12c52" />
+  
+  As a result we have Josh, Nancy, Bob. Now, we can try to get the password. Let's work with the auxiliary module: `scanner/smb/smb_login`
+  Since we have three users, let's set the variable USER_FILE with a document we are going to create and going to call `user.txt`
+
+  ```
+  msf6 auxiliary(scanner/smb/smb_login) > echo "josh,nancy,bob" > user.txt
+  [*] exec: echo "josh,nancy,bob" > user.txt
+  ```
+   <img width="1733" height="797" alt="Screenshot 2025-09-13 at 2 53 29 PM" src="https://github.com/user-attachments/assets/15f3b0d0-3dad-46e4-9210-797e7910b641" />
+
+
+
   
 
   
