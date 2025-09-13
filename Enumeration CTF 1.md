@@ -71,6 +71,19 @@
   After running the file, we found htat there'sa share accessible called `pubfiles` 
   <img width="1915" height="937" alt="Screenshot 2025-09-13 at 2 24 05 PM" src="https://github.com/user-attachments/assets/1fb0523d-fd67-49b2-b8d6-77217ffb80e7" />
 
+  now to access that share run this command: `smbclient \\\\target.ine.local\\pubfiles` once inside there's the flag text, retreive it with the get command
+  <img width="886" height="257" alt="Screenshot 2025-09-13 at 3 05 43 PM" src="https://github.com/user-attachments/assets/f2992d78-80a3-43bc-9c3d-5c593c12b8ef" />
+
+  The `flag1.txt` file is now available on the desktop. There's the first flag. 
+  <img width="377" height="68" alt="Screenshot 2025-09-13 at 3 08 21 PM" src="https://github.com/user-attachments/assets/3050020c-24d3-4537-a345-eb57d0f27d82" />
+
+
+
+  
+  
+  
+  ##FOR LATER
+  
   Now we have to retreive the list of users, for that use the auxiliary module `scanner/smb/smb_enumusers`
   <img width="1358" height="591" alt="Screenshot 2025-09-13 at 2 44 58 PM" src="https://github.com/user-attachments/assets/1ce60cde-5810-4178-abf1-93ec5ac12c52" />
   
