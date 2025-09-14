@@ -124,6 +124,8 @@
   Now we can try to access the FTP server and get the third flag 
     <img width="1888" height="680" alt="Screenshot 2025-09-14 at 1 32 47 PM" src="https://github.com/user-attachments/assets/1b2c5914-bbc0-45bf-b26a-8881f30978a4" />
 
+  Fourth flag contains the following clue: This is a warning meant to deter unauthorized users from logging in.
+
   
 
   
