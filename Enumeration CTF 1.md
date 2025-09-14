@@ -111,7 +111,8 @@
    <img width="1550" height="393" alt="Screenshot 2025-09-14 at 11 58 20 AM" src="https://github.com/user-attachments/assets/ebaefe0d-8fd3-489f-b50c-335893cc239e" />
 
    from there we got a banner: `FTP Banner: '220 Welcome to blah FTP service. Reminder to users, specifically ashley, alice and amanda to change their weak passwords immediately!!!\x0d\x0a'`
-   
+   Let's try to bruteforce it with the auxiliary module `auxiliary/scanner/ftp/ftp_login` change the options like the port and the username and userpass_file. In my case I'll try to run the password file against each user separately 
+  <img width="1348" height="613" alt="Screenshot 2025-09-14 at 12 03 46 PM" src="https://github.com/user-attachments/assets/c00b03ba-744a-4d8a-833c-d29fc14d99cb" />
 
 
    
