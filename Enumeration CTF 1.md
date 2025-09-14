@@ -125,10 +125,15 @@
     <img width="1888" height="680" alt="Screenshot 2025-09-14 at 1 32 47 PM" src="https://github.com/user-attachments/assets/1b2c5914-bbc0-45bf-b26a-8881f30978a4" />
 
   Fourth flag contains the following clue: This is a warning meant to deter unauthorized users from logging in.
+  Now try to access the SSH server since it's the only one we have't worked with yet.
+ 
+  <img width="736" height="511" alt="Screenshot 2025-09-14 at 1 54 54 PM" src="https://github.com/user-attachments/assets/25f68bb8-046f-471d-aab3-6333eb917914" />
+  You'll see the message previous the authentication and there's is the flag. 
 
-  
+  Now you have completed the lab! 
 
-  
+  <img width="1918" height="792" alt="Screenshot 2025-09-14 at 1 56 12 PM" src="https://github.com/user-attachments/assets/0c1af9a2-d995-4e2a-97a3-9fcbf3287ab3" />
+
 
   
 
