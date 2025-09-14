@@ -96,7 +96,7 @@
     [*] Auxiliary module execution completed
     ```
 
-  Now, let's try to access the SMB with josh's credentials
+  Now, let's try to access the SMB with josh's credenti
   <img width="689" height="242" alt="Screenshot 2025-09-13 at 3 26 32 PM" src="https://github.com/user-attachments/assets/5b44927f-1b4b-416f-8f79-80a973b63e75" />
 
   There's is flag 2
@@ -111,9 +111,24 @@
    <img width="1550" height="393" alt="Screenshot 2025-09-14 at 11 58 20 AM" src="https://github.com/user-attachments/assets/ebaefe0d-8fd3-489f-b50c-335893cc239e" />
 
    from there we got a banner: `FTP Banner: '220 Welcome to blah FTP service. Reminder to users, specifically ashley, alice and amanda to change their weak passwords immediately!!!\x0d\x0a'`
-   Let's try to bruteforce it with the auxiliary module `auxiliary/scanner/ftp/ftp_login` change the options like the port and the username and userpass_file. In my case I'll try to run the password file against each user separately 
-  <img width="1348" height="613" alt="Screenshot 2025-09-14 at 12 03 46 PM" src="https://github.com/user-attachments/assets/c00b03ba-744a-4d8a-833c-d29fc14d99cb" />
+   Let's try to bruteforce it with the auxiliary module `auxiliary/scanner/ftp/ftp_login` change the options like the port and the username and pass_file. In my case I'll try to run the password file against each user separately 
+  <img width="1678" height="475" alt="Screenshot 2025-09-14 at 1 25 40 PM" src="https://github.com/user-attachments/assets/90bb911a-9eef-4b16-8577-a4b040e3f747" />
 
+  when we run it against alice, we found an entry 
+  ```
+  [+] 192.83.150.3:5554     - 192.83.150.3:5554 - Login Successful: alice:pretty
+  [*] target.ine.local:5554 - Scanned 1 of 1 hosts (100% complete)
+  [*] Auxiliary module execution completed
+  
+  ```
+  Now we can try to access the FTP server and get the third flag 
+    <img width="1888" height="680" alt="Screenshot 2025-09-14 at 1 32 47 PM" src="https://github.com/user-attachments/assets/1b2c5914-bbc0-45bf-b26a-8881f30978a4" />
+
+  
+
+  
+
+  
 
    
 
