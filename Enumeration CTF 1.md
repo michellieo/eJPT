@@ -1,4 +1,4 @@
-# 1. Assessment Methodologies: Enumeration CTF 1
+555# 1. Assessment Methodologies: Enumeration CTF 1
 
 
 ### Objective
@@ -105,7 +105,16 @@
   Flag 3 says: Follow the hint given in the previous flag to uncover this one. From it we know that there's a FTP service running. We can validate it with NMAP scan
    <img width="780" height="269" alt="Screenshot 2025-09-14 at 11 53 54 AM" src="https://github.com/user-attachments/assets/8cd5d113-ea55-412f-9132-1cfb2a425da7" />
 
-   As a result we cn see that port 5554 is running with ftp service
+   As a result we cn see that port 5554 is running with ftp service. 
+
+   Let's check the version of the FTP with the auxiliary module ftp_version. Also, change the option of RPORT to 5554 as the service is running in that port. 
+   <img width="1550" height="393" alt="Screenshot 2025-09-14 at 11 58 20 AM" src="https://github.com/user-attachments/assets/ebaefe0d-8fd3-489f-b50c-335893cc239e" />
+
+   from there we got a banner: `FTP Banner: '220 Welcome to blah FTP service. Reminder to users, specifically ashley, alice and amanda to change their weak passwords immediately!!!\x0d\x0a'`
+   
+
+
+   
 
   
   
