@@ -1,4 +1,4 @@
-555# 1. Assessment Methodologies: Enumeration CTF 1
+# 1. Assessment Methodologies: Enumeration CTF 1
 
 
 ### Objective
