@@ -26,3 +26,5 @@ Document the solution to the lab assesment of eJPT course.
 
   Second Flag has this statement: The data storage has some loose security measures. Can you find the flag hidden within it?
   
+  The second flag was found in the database "mysql" 
+    <img width="1279" height="699" alt="Screenshot 2025-10-13 at 2 23 58 AM" src="https://github.com/user-attachments/assets/56fd43b6-cda6-4fca-9919-8b56bd26af53" />
