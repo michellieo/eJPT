@@ -28,3 +28,5 @@ Document the solution to the lab assesment of eJPT course.
   
   The second flag was found in the database "mysql" 
     <img width="1279" height="699" alt="Screenshot 2025-10-13 at 2 23 58 AM" src="https://github.com/user-attachments/assets/56fd43b6-cda6-4fca-9919-8b56bd26af53" />
+
+  The clue for the thir flag is: A PHP file that displays server information might be worth examining. What could be hidden in plain sight?
