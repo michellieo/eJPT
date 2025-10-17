@@ -36,3 +36,10 @@ Document the solution to the lab assesment of eJPT course.
     The information of the php server is stored in phpinfo.php file, if we look carefully we will find the thrid flag.
     <img width="1234" height="663" alt="Screenshot 2025-10-17 at 5 23 34 PM" src="https://github.com/user-attachments/assets/b9c84ee8-69c0-4a8a-8e4c-97652dcb165a" />
 
+  For the latest flag, this is the informaation we got: Sensitive directories might hold critical information. Search through carefully for hidden gems.
+    From the gobuster resut, we can see that there's directory called passwords, if you acces it, you'll see a file called flag.txt, there's the 4th flag
+    <img width="1220" height="646" alt="Screenshot 2025-10-17 at 5 27 04 PM" src="https://github.com/user-attachments/assets/b5f392d9-8f31-4cb9-ad34-9b5d4f161bdc" />
+
+That was all, we have completed the lab
+<img width="1669" height="891" alt="Screenshot 2025-10-17 at 5 28 42 PM" src="https://github.com/user-attachments/assets/9323c701-66bb-4380-bb60-45d88586bed2" />
+
