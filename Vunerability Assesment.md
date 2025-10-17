@@ -33,3 +33,6 @@ Document the solution to the lab assesment of eJPT course.
     <img width="1279" height="699" alt="Screenshot 2025-10-13 at 2 23 58 AM" src="https://github.com/user-attachments/assets/56fd43b6-cda6-4fca-9919-8b56bd26af53" />
 
   The clue for the thir flag is: A PHP file that displays server information might be worth examining. What could be hidden in plain sight?
+    The information of the php server is stored in phpinfo.php file, if we look carefully we will find the thrid flag.
+    <img width="1234" height="663" alt="Screenshot 2025-10-17 at 5 23 34 PM" src="https://github.com/user-attachments/assets/b9c84ee8-69c0-4a8a-8e4c-97652dcb165a" />
+
