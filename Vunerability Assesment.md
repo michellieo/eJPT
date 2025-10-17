@@ -25,8 +25,11 @@ Document the solution to the lab assesment of eJPT course.
   <img width="1233" height="671" alt="Screenshot 2025-10-13 at 1 55 19 AM" src="https://github.com/user-attachments/assets/c08bbb84-d22e-4533-82f6-9c46fede9efe" /> 
 
   Second Flag has this statement: The data storage has some loose security measures. Can you find the flag hidden within it?
+  If you log into target.ine.local/robots.txt directory you'll see some disallowed links/directories
+   <img width="1234" height="672" alt="Screenshot 2025-10-17 at 5 16 16 PM" src="https://github.com/user-attachments/assets/8fcaac6a-d337-445b-819d-b75d348d8b59" />
+  We can log into target.ine.local/phpmyadmin
   
-  The second flag was found in the database "mysql" 
+  The second flag was found in the database "mysql" in the secret_info table 
     <img width="1279" height="699" alt="Screenshot 2025-10-13 at 2 23 58 AM" src="https://github.com/user-attachments/assets/56fd43b6-cda6-4fca-9919-8b56bd26af53" />
 
   The clue for the thir flag is: A PHP file that displays server information might be worth examining. What could be hidden in plain sight?
