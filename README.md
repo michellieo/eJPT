@@ -18,7 +18,7 @@ Below is a list of completed and ongoing labs. Each lab includes objectives, bas
 - [Lab 01 – T1046 : Network Service Scanning](/T1046:%20Network-Service-Scanning.md)
 - [Lab 02 – Assessment Methodologies: Information Gathering CTF 1](/Information-Gathering.md)
 - [Lab 03 – Assessment Methodologies: Footprinting and Scanning CTF 1](/Footprinting-Scanning.md)
-- [Lab 04 – Assessment Methodologies: Enumeration CTF 1](/Enumeration-CTF-1.md)
+- [Lab 04 – Assessment Methodologies: Enumeration CTF 1](/Enumeration%20CTF%201.md)
 - [Lab 05 – Assessment Methodologies: Vulnerability Assesment CTF 1](/Enumeration-CTF-1.md)
 - [Lab 06 – Host & Network Penetration Testing: System-Host Based Attacks CTF 1](/System-Host-Based-Attacks-CTF-1.md)
 - *(More labs will be added as I progress)*
