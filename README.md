@@ -15,7 +15,7 @@ All labs are documented in **Markdown (.md)** format and are continuously update
 
 Below is a list of completed and ongoing labs. Each lab includes objectives, basic steps, and observations.
 
-- [Lab 01 – T1046 : Network Service Scanning](/T1046: Network-Service-Scanning.md)
+- [Lab 01 – T1046 : Network Service Scanning](/T1046:%20Network-Service-Scanning.md)
 - [Lab 02 – Assessment Methodologies: Information Gathering CTF 1](/Information-Gathering.md)
 - [Lab 03 – Assessment Methodologies: Footprinting and Scanning CTF 1](/Footprinting-Scanning.md)
 - [Lab 04 – Assessment Methodologies: Enumeration CTF 1](/Enumeration-CTF-1.md)
