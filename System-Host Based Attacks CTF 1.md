@@ -97,6 +97,27 @@ Let's use the MSF module for the exploit ow that we get the credentials: `exploi
 
 <img width="784" height="138" alt="Screenshot 2026-01-26 at 11 13 54 PM" src="https://github.com/user-attachments/assets/adc90f9e-b1f2-457a-a971-70415f567208" />
 
+Now, let's list the shares. For that we wil use `smbclient`
 
+```
+┌──(root㉿INE)-[~]
+└─# smbclient -L \\\\target2.ine.local -U administrator
+```
+Now that we have the shares, we can try to access one by one and check if we can find the flag.
 
+<img width="830" height="468" alt="Screenshot 2026-01-26 at 11 33 12 PM" src="https://github.com/user-attachments/assets/9d0d95e3-efc4-4e86-841a-3ee68484e9cc" />
+
+Flag 3 was found on the C$ share. Use the `get flag3.txt` command to donwload the file locally
+
+<img width="894" height="177" alt="Screenshot 2026-01-26 at 11 35 17 PM" src="https://github.com/user-attachments/assets/44dd2a61-2976-4d24-b965-7815c1d538d1" />
+
+For the last flag, you have o go to the Desktop folder, and download the flag
+
+<img width="767" height="213" alt="Screenshot 2026-01-26 at 11 42 30 PM" src="https://github.com/user-attachments/assets/ba0c27e7-adf7-409c-9012-9b953769af85" />
+
+<img width="1910" height="118" alt="Screenshot 2026-01-26 at 11 44 10 PM" src="https://github.com/user-attachments/assets/94a20d40-bd2c-4697-9456-ae4c9e3367b5" />
+
+And the lab is now complete
+
+<img width="1680" height="885" alt="Screenshot 2026-01-26 at 11 44 51 PM" src="https://github.com/user-attachments/assets/59163176-ba00-4cee-9a4d-11ac26d35d12" />
 
