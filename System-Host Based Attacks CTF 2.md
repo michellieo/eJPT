@@ -10,8 +10,7 @@
 ### Tools Used
 
 - Nmap
-- Hydra
-- Cadaver
+- Burp Suite
 - Metasploit Framework
 
 ### Flags to Capture:
