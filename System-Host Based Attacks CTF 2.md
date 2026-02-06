@@ -92,6 +92,53 @@ Change parameters: `set RHOST target2.ine.local` and `set SPAWN_PTY yes`
 
 <img width="986" height="143" alt="Screenshot 2026-02-06 at 12 40 40 AM" src="https://github.com/user-attachments/assets/0fda3c14-c914-4f7e-a317-fe0f43f4867e" />
 
+Now we can check the session that was opened with the command `sessions`
 
+<img width="1668" height="183" alt="Screenshot 2026-02-06 at 12 43 23 AM" src="https://github.com/user-attachments/assets/0f261bce-15c0-4e1b-82c4-00be79cd5f46" />
+
+Now, in order to get access to the shell: `sessions -i 3` Now, let's go to the  home directory 
+
+<img width="595" height="171" alt="Screenshot 2026-02-06 at 12 46 37 AM" src="https://github.com/user-attachments/assets/dd045a0b-4f4e-48c4-b12e-80dcd1e8243f" />
+
+We have obtained the third flag. For the 4th flag we have to go to the /root directory
+
+<img width="454" height="54" alt="Screenshot 2026-02-06 at 12 48 26 AM" src="https://github.com/user-attachments/assets/be8737c9-944c-42a8-a843-260c4ff86a96" />
+
+We were not able to access root due to the permissions of the folder. We will elevate our privileges
+
+<img width="568" height="344" alt="Screenshot 2026-02-06 at 12 48 55 AM" src="https://github.com/user-attachments/assets/fe6b34f3-11bc-47e1-a9a6-be9b54f5b869" />
+
+In users directory, we find two files called `greetings` and `welcome`. Let's validate if those files are binary. 
+
+<img width="500" height="178" alt="Screenshot 2026-02-06 at 12 52 35 AM" src="https://github.com/user-attachments/assets/ab08576e-de64-4433-8802-33cbc850ab10" />
+
+Let's run the files, we have access to welcome, but not greetings 
+<img width="443" height="124" alt="Screenshot 2026-02-06 at 12 54 21 AM" src="https://github.com/user-attachments/assets/b6f0b5a5-ec97-4654-bf0d-8c82e0f7a001" />
+
+Now let's verify the type of file
+
+```
+sh-5.2$ file welcome 
+file welcome 
+welcome: setuid ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, for GNU/Linux 3.2.0, BuildID[sha1]=199bc8fd6e66e29f770cdc90ece1b95484f34fca, not stripped
+```
+if we run the strings command to check functions within the `welcome` binary file, we can see the `greetings` binary on it. Therefore, we'll remove this greetings file and create a new one, the new file will help us esclate our privileges
+
+<img width="735" height="500" alt="Screenshot 2026-02-06 at 12 56 51 AM" src="https://github.com/user-attachments/assets/02762352-5646-4247-97c6-9f0b5eb3a139" />
+
+The payload for the new `greetings` file is /bin/bash
+
+<img width="754" height="175" alt="Screenshot 2026-02-06 at 1 00 00 AM" src="https://github.com/user-attachments/assets/4772a7e8-169e-487f-84ec-037ec0b2c787" />
+
+Now, let's verify by running the welcome binary
+
+<img width="330" height="63" alt="Screenshot 2026-02-06 at 1 00 42 AM" src="https://github.com/user-attachments/assets/771bc3b1-943f-4239-95b8-01788ed4e8ce" />
+
+And now, we have the Flag 4!
+
+<img width="1673" height="888" alt="Screenshot 2026-02-06 at 1 02 32 AM" src="https://github.com/user-attachments/assets/ae4ca4b6-ed10-4039-a6fb-ac41b328fa67" />
+
+
+<img width="703" height="356" alt="Screenshot 2026-02-06 at 1 01 57 AM" src="https://github.com/user-attachments/assets/450b1508-1533-4f2b-afbb-8f23d89af979" />
 
 
