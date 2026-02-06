@@ -65,5 +65,16 @@ On the Repeater tab, I'll get rid of the User-Agent information and replace that
 <img width="687" height="141" alt="Screenshot 2026-02-06 at 12 16 04 AM" src="https://github.com/user-attachments/assets/2195dc23-41e8-41d3-9c80-33af126a3e82" />
 
 Now, that I have gained access, I'll position myself in `\` and look for the Flag 1
+
 <img width="490" height="512" alt="Screenshot 2026-02-06 at 12 20 08 AM" src="https://github.com/user-attachments/assets/88230f26-9eff-422e-a965-7ecb1f801917" />
+
+The second flag is under the same host, let's move to `/opt/apache/htdocs/` 
+
+<img width="496" height="438" alt="Screenshot 2026-02-06 at 12 22 36 AM" src="https://github.com/user-attachments/assets/4973d902-9572-4365-af9c-00b6c0903f4e" />
+
+Once there, I'll check the content and cat the flag. To list hidden files, use the command `ls -la`
+
+<img width="573" height="216" alt="Screenshot 2026-02-06 at 12 24 17 AM" src="https://github.com/user-attachments/assets/21b9508a-e0a4-4f39-94f7-d3da4c2ff52f" />
+
+We have discovered the hidden file and the flag
 
