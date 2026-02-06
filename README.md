@@ -21,6 +21,7 @@ Below is a list of completed and ongoing labs. Each lab includes objectives, bas
 - [Lab 04 – Assessment Methodologies: Enumeration CTF 1](/Enumeration%20CTF%201.md)
 - [Lab 05 – Assessment Methodologies: Vulnerability Assesment CTF 1](/Vunerability%20Assesment.md)
 - [Lab 06 – Host & Network Penetration Testing: System-Host Based Attacks CTF 1](/System-Host%20Based%20Attacks%20CTF%201.md)
+- [Lab 07 – Host & Network Penetration Testing: System-Host Based Attacks CTF 2](/System-Host%20Based%20Attacks%20CTF%202.md)
 - *(More labs will be added as I progress)*
 
 
