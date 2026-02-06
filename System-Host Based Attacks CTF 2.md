@@ -113,6 +113,7 @@ In users directory, we find two files called `greetings` and `welcome`. Let's va
 <img width="500" height="178" alt="Screenshot 2026-02-06 at 12 52 35 AM" src="https://github.com/user-attachments/assets/ab08576e-de64-4433-8802-33cbc850ab10" />
 
 Let's run the files, we have access to welcome, but not greetings 
+
 <img width="443" height="124" alt="Screenshot 2026-02-06 at 12 54 21 AM" src="https://github.com/user-attachments/assets/b6f0b5a5-ec97-4654-bf0d-8c82e0f7a001" />
 
 Now let's verify the type of file
