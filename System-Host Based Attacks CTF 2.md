@@ -76,5 +76,17 @@ Once there, I'll check the content and cat the flag. To list hidden files, use t
 
 <img width="573" height="216" alt="Screenshot 2026-02-06 at 12 24 17 AM" src="https://github.com/user-attachments/assets/21b9508a-e0a4-4f39-94f7-d3da4c2ff52f" />
 
-We have discovered the hidden file and the flag
+We have discovered the hidden file and the Flag 2.
+
+For the next flag, we will work with the other target. And Firstly, a nmap scan will be run 
+
+<img width="860" height="330" alt="Screenshot 2026-02-06 at 12 32 39 AM" src="https://github.com/user-attachments/assets/e0accaef-a345-4376-b5cd-1dd5e75848b8" />
+
+From that scan, we can tell that the port 22 is open and running the service  libssh 0.8.3. Therefore, We'll look for a exploit on Metasploit.
+
+<img width="1130" height="283" alt="Screenshot 2026-02-06 at 12 35 15 AM" src="https://github.com/user-attachments/assets/02e525a2-de32-48cd-9850-a36f138ab66e" />
+
+
+
+
 
