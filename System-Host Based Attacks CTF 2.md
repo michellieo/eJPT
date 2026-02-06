@@ -86,6 +86,11 @@ From that scan, we can tell that the port 22 is open and running the service  li
 
 <img width="1130" height="283" alt="Screenshot 2026-02-06 at 12 35 15 AM" src="https://github.com/user-attachments/assets/02e525a2-de32-48cd-9850-a36f138ab66e" />
 
+<img width="1334" height="425" alt="Screenshot 2026-02-06 at 12 39 29 AM" src="https://github.com/user-attachments/assets/8f5ef36d-cb2d-4a07-ac98-e77b5cff02ec" />
+
+Change parameters: `set RHOST target2.ine.local` and `set SPAWN_PTY yes` 
+
+<img width="986" height="143" alt="Screenshot 2026-02-06 at 12 40 40 AM" src="https://github.com/user-attachments/assets/0fda3c14-c914-4f7e-a317-fe0f43f4867e" />
 
 
 
