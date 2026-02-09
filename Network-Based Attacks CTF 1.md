@@ -24,6 +24,7 @@
 ### Detailed Steps
 
 #### Flag 1
+ 
  I set a filter `http.response.code==200` so I can get the request that has 200 as a response
  
  <img width="1916" height="140" alt="Screenshot 2026-02-08 at 11 27 51 PM" src="https://github.com/user-attachments/assets/ea879487-1730-4410-9974-377b9ebb12f7" />
@@ -35,22 +36,51 @@ This gave me 2 results, select one and go to the Hypertext Trnasfer Protocol, he
 #### Flag 2
 
 Maintain the filter, check the `Ethernet II` and `Internet Protocol Version` sections, and the answer will be the Destionation host
+
 <img width="967" height="41" alt="Screenshot 2026-02-08 at 11 38 33 PM" src="https://github.com/user-attachments/assets/74b0ff2b-a80e-43bd-a599-ff1039b035d7" />
 
 #### Flag 3
 
+The Wireshark filter is nbns. After applying this filter, we get some queries, where the affected user reached to its Broadcast ip. 
+
+<img width="1910" height="231" alt="Screenshot 2026-02-08 at 11 51 28 PM" src="https://github.com/user-attachments/assets/55d17c82-a7de-4d9d-9094-a32d4f014c61" />
+
+Now go to NetBIOS Name Service, and you'll find your asnwer there 
+
+<img width="952" height="234" alt="Screenshot 2026-02-08 at 11 52 19 PM" src="https://github.com/user-attachments/assets/5a0b2320-fca2-43bf-8a1c-64a5e77ef98e" />
 
 #### Flag 4
 
+Press Ctrl+F in Wireshark to open Find Packet, switch from "Display filter" to "String", select "Packet bytes" on the left side of the search bar, Then search for mystery_file.ps1.
+
+<img width="1912" height="41" alt="Screenshot 2026-02-09 at 12 04 40 AM" src="https://github.com/user-attachments/assets/d7f421fd-fc4a-47a7-8546-578a592a7a63" />
+
+Wireshark highlights the packet. The filename appears in HTTP response body bytes or SMB transfer since PowerShell downloads often use obfuscated URIs.
+
+<img width="1909" height="627" alt="Screenshot 2026-02-09 at 12 06 34 AM" src="https://github.com/user-attachments/assets/c8b0ec35-5780-4048-a5a3-82e518b4b03f" />
+
 #### Flag 5
 
+Filter the packets with the following `http.user_agent contains "PowerShell" ` Then go to the `Hypertext Transfer Protocol` and the information about User-Agent is there
+
+<img width="1917" height="850" alt="Screenshot 2026-02-09 at 12 15 32 AM" src="https://github.com/user-attachments/assets/91705f9b-4b5e-4e27-b5f2-1a6fe1a84b23" />
+
 #### Flag 6
+
+Search for Coinbase on Wireshark
+
+<img width="1907" height="54" alt="Screenshot 2026-02-09 at 12 20 02 AM" src="https://github.com/user-attachments/assets/f6f21bf1-3ffb-4318-a003-e4417eae31de" />
+
+follow the TCP stream of the highligthed packet, and there's the answer
+
+<img width="1278" height="888" alt="Screenshot 2026-02-09 at 12 21 23 AM" src="https://github.com/user-attachments/assets/55462ded-a9c8-4d32-859d-10d6b5731700" />
+
 
 ### Final Flags
 
 - Flag 1: 623start.site
 - Flag 2: 10.7.10.47, 80:86:5b:ab:1e:c4
-- Flag 3: 
-- Flag 4: 
-- Flag 5: 
-- Flag 6: 
+- Flag 3: nbns, DESKTOP-9PEA63H
+- Flag 4: rwalters
+- Flag 5: WindowsPowerShell
+- Flag 6: hnfanknocfeofbddgcijnmhnfnkdnaad
