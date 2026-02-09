@@ -5,7 +5,7 @@
  Use network analysis techniques to identify and capture the flags related to the infection and attack
 
 ## Skills Learned
-- Perform network-based attacks on  targets
+- Perform network-based attacks on target analyzing a captured network packet file test.pcap.
 
 ## Tools Used
 
@@ -24,6 +24,13 @@
 ### Detailed Steps
 
 #### Flag 1
+ I set a filter `http.response.code==200` so I can get the request that has 200 as a response
+ 
+ <img width="1916" height="140" alt="Screenshot 2026-02-08 at 11 27 51 PM" src="https://github.com/user-attachments/assets/ea879487-1730-4410-9974-377b9ebb12f7" />
+
+Thois gave me 2 results, select one and go to the Hypertext Trnasfer Protocol, here you'll find the details such such as Date, Server, etc. Also, here is the Request URI, where our flag is 
+
+<img width="957" height="413" alt="Screenshot 2026-02-08 at 11 30 37 PM" src="https://github.com/user-attachments/assets/b30f21ba-1f3c-40c5-b9ef-573053cfa0cd" />
 
 #### Flag 2
 
@@ -37,7 +44,7 @@
 
 ### Final Flags
 
-- Flag 1: 
+- Flag 1: 623start.site
 - Flag 2: 
 - Flag 3: 
 - Flag 4: 
