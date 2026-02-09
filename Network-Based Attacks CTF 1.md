@@ -84,3 +84,5 @@ follow the TCP stream of the highligthed packet, and there's the answer
 - Flag 4: rwalters
 - Flag 5: WindowsPowerShell
 - Flag 6: hnfanknocfeofbddgcijnmhnfnkdnaad
+
+<img width="1915" height="1001" alt="Screenshot 2026-02-09 at 12 22 40 AM" src="https://github.com/user-attachments/assets/eba08cdd-3d7b-413d-8eff-26db519bd9e3" />
