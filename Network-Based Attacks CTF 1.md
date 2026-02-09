@@ -28,13 +28,17 @@
  
  <img width="1916" height="140" alt="Screenshot 2026-02-08 at 11 27 51 PM" src="https://github.com/user-attachments/assets/ea879487-1730-4410-9974-377b9ebb12f7" />
 
-Thois gave me 2 results, select one and go to the Hypertext Trnasfer Protocol, here you'll find the details such such as Date, Server, etc. Also, here is the Request URI, where our flag is 
+This gave me 2 results, select one and go to the Hypertext Trnasfer Protocol, here you'll find the details such such as Date, Server, etc. Also, here is the Request URI, where our flag is 
 
 <img width="957" height="413" alt="Screenshot 2026-02-08 at 11 30 37 PM" src="https://github.com/user-attachments/assets/b30f21ba-1f3c-40c5-b9ef-573053cfa0cd" />
 
 #### Flag 2
 
+Maintain the filter, check the `Ethernet II` and `Internet Protocol Version` sections, and the answer will be the Destionation host
+<img width="967" height="41" alt="Screenshot 2026-02-08 at 11 38 33 PM" src="https://github.com/user-attachments/assets/74b0ff2b-a80e-43bd-a599-ff1039b035d7" />
+
 #### Flag 3
+
 
 #### Flag 4
 
@@ -45,7 +49,7 @@ Thois gave me 2 results, select one and go to the Hypertext Trnasfer Protocol, h
 ### Final Flags
 
 - Flag 1: 623start.site
-- Flag 2: 
+- Flag 2: 10.7.10.47, 80:86:5b:ab:1e:c4
 - Flag 3: 
 - Flag 4: 
 - Flag 5: 
