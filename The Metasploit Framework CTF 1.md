@@ -9,7 +9,7 @@ Use Metasploit and manual investigation techniques to capture the flags
 
 ## Tools Used
 
-- Wireshark
+- MetasploitÍ
 
 ## Flags to Capture:
 - Flag 1: Gain access to the MSSQLSERVER account on the target machine to retrieve the first flag.
@@ -18,8 +18,23 @@ Use Metasploit and manual investigation techniques to capture the flags
 - Flag 4: Investigate the Administrator directory to find the fourth flag.
 
 ### Detailed Steps
+  <img width="1920" height="972" alt="Screenshot 2026-03-01 at 7 43 26 PM" src="https://github.com/user-attachments/assets/89a66586-f6af-420b-90cc-899be98e5596" />
 
 #### Flag 1
+
+First open nmap and run the PostgreSQL service wuth the command `service postgresql start && msfconsole` And run the nmap scan to detect the services and the Operating system of the target
+
+
+<img width="1012" height="547" alt="Screenshot 2026-03-01 at 8 59 07 PM" src="https://github.com/user-attachments/assets/0173a13e-42f4-44eb-8c9f-c9f0a68fffc4" />
+
+We can identify the por 1433 is open and running  Microsoft SQL Server 2012 11.00.6020. Now we proceed to search the exploit. `search type:exploit  sql 2012  platform:windows` 
+
+<img width="1497" height="324" alt="Screenshot 2026-03-01 at 9 01 30 PM" src="https://github.com/user-attachments/assets/99931c5b-9590-4f23-aa33-43e8aed5de38" />
+
+Let's choose `exploit/windows/mssql/mssql_clr_payload` and `show the options` in order to check the parameters we need to set `set RHOSTS target.ine.local` if we hit run, we ill get the following error
+
+
+
 
 #### Flag 2
 
