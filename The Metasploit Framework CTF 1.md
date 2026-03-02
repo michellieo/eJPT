@@ -59,6 +59,11 @@ type flag1.txt
 
 #### Flag 2
 
+Let's move to the Wndows folder, and look for the config directory. C:\Windows\System32\config 
+
+<img width="554" height="60" alt="Screenshot 2026-03-01 at 9 49 44 PM" src="https://github.com/user-attachments/assets/3d653468-ef9c-4503-8d1c-40f89af31226" />
+
+
 #### Flag 3
 
 #### Flag 4
@@ -66,7 +71,7 @@ type flag1.txt
 
 ### Final Flags
 
-- Flag 1: 
+- Flag 1: 88093e456fa14d81a74c04e91a4bc832
 - Flag 2: 
 - Flag 3: 
 - Flag 4: 
