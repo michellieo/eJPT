@@ -63,6 +63,15 @@ Let's move to the Wndows folder, and look for the config directory. C:\Windows\S
 
 <img width="554" height="60" alt="Screenshot 2026-03-01 at 9 49 44 PM" src="https://github.com/user-attachments/assets/3d653468-ef9c-4503-8d1c-40f89af31226" />
 
+Since we are not able to access, we have to escalate privileges with the command `getsystem` 
+
+<img width="793" height="134" alt="Screenshot 2026-03-06 at 9 01 13 PM" src="https://github.com/user-attachments/assets/39690631-26a9-4706-86ea-ecfe0bfdcf04" />
+
+From the first output of `getuid` you can see that the we have basic permissions, then after running the escalation command, we got highest privilege account.
+
+Í<img width="841" height="643" alt="Screenshot 2026-03-06 at 9 04 30 PM" src="https://github.com/user-attachments/assets/3f093e1d-d671-461d-8830-348503bdaa6d" />
+
+Now we have permissions and can get the second flag, with the `type flag2.txt` command
 
 #### Flag 3
 
@@ -72,8 +81,6 @@ Let's move to the Wndows folder, and look for the config directory. C:\Windows\S
 ### Final Flags
 
 - Flag 1: 88093e456fa14d81a74c04e91a4bc832
-- Flag 2: 
+- Flag 2: 663d4caaba7641b7a6a63b554cf78aef
 - Flag 3: 
 - Flag 4: 
-- Flag 5: 
-- Flag 6: 
