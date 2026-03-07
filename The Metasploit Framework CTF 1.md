@@ -75,12 +75,34 @@ Now we have permissions and can get the second flag, with the `type flag2.txt` c
 
 #### Flag 3
 
+The third flag is under `\Windows\System32`
+
+<img width="926" height="192" alt="Screenshot 2026-03-06 at 9 41 28 PM" src="https://github.com/user-attachments/assets/715f8990-fa45-4d09-bb60-d2bc21795f18" />
+
+<img width="872" height="56" alt="Screenshot 2026-03-06 at 9 43 04 PM" src="https://github.com/user-attachments/assets/634f0f89-2222-4a6d-84c8-84067580aa7d" />
+
+
+
+
 #### Flag 4
+
+Now, let's go to the Users directory and list all the directories
+
+<img width="665" height="715" alt="Screenshot 2026-03-06 at 9 45 18 PM" src="https://github.com/user-attachments/assets/b8a35010-4171-4a56-a4ed-f3de09d3093f" />
+
+Now, inspect the folders and in Desktop, you'll find the last flag 
+
+<img width="575" height="578" alt="Screenshot 2026-03-06 at 9 47 29 PM" src="https://github.com/user-attachments/assets/3a224dd6-12e8-4884-b839-9df301e99e47" />
+
 
 
 ### Final Flags
 
+<img width="1914" height="923" alt="Screenshot 2026-03-06 at 9 47 47 PM" src="https://github.com/user-attachments/assets/db520ced-90be-4614-b552-4ebd066b7e4d" />
+
+
+
 - Flag 1: 88093e456fa14d81a74c04e91a4bc832
 - Flag 2: 663d4caaba7641b7a6a63b554cf78aef
-- Flag 3: 
-- Flag 4: 
+- Flag 3: 83bcbf46c8e641b9879485174788f541
+- Flag 4: 16cf790247a7464985cc2ef73f7d312e
