@@ -9,7 +9,9 @@ Use Metasploit and manual investigation techniques to capture the flags
 
 ## Tools Used
 
-- MetasploitÍ
+- Metasploit
+- Nmap
+- rsync
 
 ## Flags to Capture:
 - Flag 1: Gain access to the MSSQLSERVER account on the target machine to retrieve the first flag.
