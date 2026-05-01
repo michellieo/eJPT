@@ -9,7 +9,9 @@ Using various exploration techniques, complete the following tasks to capture th
 
 ## Tools Used
 
-- MetasploitÍ
+- Metasploit
+- Nmap
+- rsync
 
 ## Flags to Capture:
 - Flag 1: Enumerate the open port using Metasploit, and inspect the RSYNC banner closely; it might reveal something interesting.
