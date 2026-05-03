@@ -40,5 +40,5 @@ msf6 > db_nmap -sS -sV -O target1.ine.local
 [*] Nmap: OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 [*] Nmap: Nmap done: 1 IP address (1 host up) scanned in 1.62 seconds
 ```
-
+port 873 tcp is open and the service rsync is running 
 
