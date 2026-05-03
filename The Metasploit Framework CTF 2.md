@@ -20,6 +20,7 @@ Using various exploration techniques, complete the following tasks to capture th
 - Flag 4: Automated tasks can sometimes leave clues. Investigate scheduled jobs or running processes to uncover the hidden flag.
 
 ### Detailed Steps
+<img width="1920" height="976" alt="Screenshot 2026-05-03 at 6 45 26 PM" src="https://github.com/user-attachments/assets/6b002db8-1979-418e-9540-c3ede09dccaa" />
 
 First run the ```service postgresql start && msfconsole```  run the namp scan.
 
