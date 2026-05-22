@@ -25,6 +25,7 @@ Below is a list of completed and ongoing labs. Each lab includes objectives, bas
 - [Lab 08 – Host & Network Penetration Testing: Network-Based Attacks CTF 1](/Network-Based%20Attacks%20CTF%201.md)
 - [Lab 09 – Host & Network Penetration Testing: The Metasploit Framework CTF 1](/The%20Metasploit%20Framework%20CTF%201.md)
 - [Lab 10 – Host & Network Penetration Testing: The Metasploit Framework CTF 2](/The%20Metasploit%20Framework%20CTF%202.md)
+- [Lab 11 – Host & Network Penetration Testing: Exploitation CTF 1](/Exploitation%20CTF%201.md)
 - *(More labs will be added as I progress)*
 
 
